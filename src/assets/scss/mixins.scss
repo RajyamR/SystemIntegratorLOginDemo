@@ -1,0 +1,69 @@
+@import "./colors.scss";
+/* SCSS variables for Colors, Fonts */
+$colors:(
+    1: $page-background, 2: $header-bg, 3: $header-badge, 4: $dark-text, 5: $input-border-color,
+    6: $negative, 7: $active-state, 8: $orange, 9: $green, 10: $button-primary, 
+    11: $link-text-hover
+);
+@mixin  color($colorNumber) {
+    color : map-get($colors, $colorNumber) !important;
+}
+@mixin  bgcolor($colorNumber) {
+    background-color : map-get($colors, $colorNumber) !important;
+}
+@each $i,$color in $colors {
+    .gw-color-#{$i}{
+        @include color($i);
+    }
+    .gw-bg-color-#{$i}{
+        @include bgcolor($i);
+    }
+}
+$borderRadius: 5, 10;
+@each $var in $borderRadius{
+    .gw-brs#{$var} {
+        border-radius: #{$var}px;
+    }
+}
+$spacings: 15, 10, 5, 0;
+@each $var in $spacings {
+    .gw-p#{$var} {
+        padding: #{$var}px;
+    }
+    .gw-pr#{$var} {
+        padding-right: #{$var}px !important;
+    }
+    .gw-pl#{$var} {
+        padding-left: #{$var}px !important;
+    }
+    .gw-pt#{$var} {
+        padding-top: #{$var}px !important;
+    }
+    .gw-pb#{$var} {
+        padding-bottom: #{$var}px !important;
+    }
+    .gw-m#{$var} {
+        margin: #{$var}px;
+    }
+    .gw-mr#{$var} {
+        margin-right: #{$var}px !important;
+    }
+    .gw-ml#{$var} {
+        margin-left: #{$var}px !important;
+    }
+    .gw-mt#{$var} {
+        margin-top: #{$var}px !important;
+    }
+    .gw-mb#{$var} {
+        margin-bottom: #{$var}px !important;
+    }
+}
+.gw-text-bold{
+    font-weight: bolder;
+}
+.gw-text-italic{
+    font-style: italic;
+}
+.no-pointer{
+    pointer-events: none;
+}

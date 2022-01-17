@@ -1,0 +1,53 @@
+{
+  "name": "system-integrator-login-ui",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~12.2.0",
+    "@angular/common": "~12.2.0",
+    "@angular/compiler": "~12.2.0",
+    "@angular/core": "~12.2.0",
+    "@angular/forms": "~12.2.0",
+    "@angular/material": "~12.2.0",
+    "@angular/platform-browser": "~12.2.0",
+    "@angular/platform-browser-dynamic": "~12.2.0",
+    "@angular/router": "~12.2.0",
+    "@datadog/browser-rum": "^3.6.2",
+    "@okta/okta-angular": "^4.1.0",
+    "@okta/okta-auth-js": "^5.5.0",
+    "@okta/okta-signin-widget": "^5.14.1",
+    "bootstrap": "^5.1.1",
+    "chart.js": "^2.9.4",
+    "chartjs-plugin-labels": "1.1.0",
+    "lodash": "^4.17.21",
+    "ng-material-multilevel-menu": "^5.5.3",
+    "ng2-charts": "^2.4.3",
+    "ngx-tableau": "file:node_dependencies/ngx-tableau",
+    "ngx-toastr": "^13.2.1",
+    "rxjs": "~6.6.0",
+    "rxjs-compat": "^6.6.7",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~12.2.9",
+    "@angular/cli": "~12.2.9",
+    "@angular/compiler-cli": "~12.2.0",
+    "@types/jasmine": "~3.8.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.8.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "typescript": "~4.3.5"
+  }
+}

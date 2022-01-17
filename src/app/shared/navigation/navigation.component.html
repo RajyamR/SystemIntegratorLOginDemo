@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container" autosize>
+    <mat-sidenav #sidenav class="sidenav-lists" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()" autosize>
+        <ng-material-multilevel-menu [items]='appitems' [configuration]='config'>
+            <ng-template #listTemplate let-item="item" let-configuration="configuration">
+                <div class="app-menu-item" [ngClass]="item.class" style="align-items: center;"  *ngIf="item.hide!==false">
+                    <div class="title-and-image" [matTooltip]="item.tooltip" matTooltipClass="nav-tooltip" matTooltipPosition="right">
+                        <div class="icon-container">
+                            <span [ngClass]="getClass(item)" class="icon" *ngIf="item?.faIcon"></span>
+                            <img [src]="item?.customIcon" class="custom-icon" *ngIf="item?.customIcon"/>
+                        </div>
+                        <div class="label-container">
+                            <span class="label">{{item.label}}</span>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="icon-arrow-container" *ngIf='item.hasChilden'>
+                            <mat-icon *ngIf="!configuration.rtlLayout" [@ExpandedLTR]="item.expanded ? 'yes' : 'no'">
+                                keyboard_arrow_down
+                            </mat-icon>
+                        </div>
+                    </div>
+                    <div *ngIf="item.showFavourite">
+                        <span class="bi bi-star" *ngIf="!item.isFavourite" [ngClass]="{'no-pointer' : item.disabled}" style="margin-right: 5px;" ></span>
+                        <span class="bi bi-star-fill" *ngIf="item.isFavourite" [ngClass]="{'no-pointer' : item.disabled}" style="margin-right: 5px;" ></span>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-material-multilevel-menu>
+        <div class="d-none d-xl-block menu-toggle-wrapper">
+            <div class="menu-toggle" (click)="closeNavmenu()">
+                <div class="item"  *ngIf="isExpanded || isShowing">
+                    <div class="icon-container">
+                        <i class="bi bi-arrow-left-short icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav>
+</mat-sidenav-container>

@@ -1,0 +1,25 @@
+#sign-in-widget{
+    background-image: url('../../assets/images/login_bgg.png')  ;  
+     max-width: 90%;
+    height: auto !important;
+     overflow: hidden;
+     object-fit: cover;
+}
+
+#okta-sign-in-header{
+padding-top:20em;
+}
+
+#okta-sign-in.auth-org-logo{
+    padding-left: 45%;
+}
+#okta-signin-username{
+    width:40%
+}
+
+#okta-signin-password{
+    width:35%
+}
+
+
+

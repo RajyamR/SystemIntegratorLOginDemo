@@ -1,0 +1,16 @@
+.content {
+    position: relative;
+
+    .landing-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .title {
+        position: absolute;
+        width: 24%;
+        top: 10%;
+        left: 6%;
+        font-size: 46px;
+    }
+}

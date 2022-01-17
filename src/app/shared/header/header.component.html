@@ -1,0 +1,25 @@
+<header>
+    <mat-toolbar>
+      <button mat-icon-button aria-label="icon-button icon" (click)="hamburgerMenu()" class="hamburger-menu d-xl-none">
+        <mat-icon>menu</mat-icon>
+     </button>
+       <a class="logo" routerLink="/user-profile">
+         <img src="../assets/images/Gainwell_Logo.svg" alt="Logo" />
+       </a>
+       <span class="spacer"></span>
+       <!-- <span class="notification-icon" >
+        <button mat-icon-button aria-label="icon-button"  matTooltip="System notifications" class="header-icon" (click)="notificationIconClicked()">
+          <i class="bi bi-bell"></i>
+        </button>
+        <span class="badge">3</span>
+       </span> -->
+       <button mat-icon-button  matTooltip="User Profile and Logout" aria-label="icon-button icon" class="header-icon" [matMenuTriggerFor]="userpreferences">
+          <i class="bi bi-person-circle"></i>
+       </button>
+        <mat-menu #userpreferences="matMenu" class="user-preferences">
+          <button mat-menu-item (click)="userPreferences()">User Profile</button>
+          <button mat-menu-item (click)="logout()">Sign Out</button>
+          </mat-menu>
+    </mat-toolbar>
+ </header>
+<!-- <app-notifications (notification)="resetNotification()" ></app-notifications> -->
